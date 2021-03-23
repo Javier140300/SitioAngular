@@ -13,12 +13,11 @@ export class HeroesComponent implements OnInit {
     name: 'Spiderman',
     edad: 23, 
     poder: 'Telaraña',
-    identidad: 'Peter Parker'
+    identidad: 'Peter Parker',
+    universo: 'Marvel'
   };
 
   constructor() { }
-
   ngOnInit(): void {
   }
-
 }

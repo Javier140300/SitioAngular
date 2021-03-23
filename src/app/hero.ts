@@ -4,4 +4,5 @@ export interface Hero{
     edad: number;
     poder: String;
     identidad: String;
+    universo: String;
 }
