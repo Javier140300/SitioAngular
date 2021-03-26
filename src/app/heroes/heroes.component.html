@@ -1,26 +1,32 @@
-<h2>{{hero.name}} Details</h2>
-<h3>Edad del super heroe: {{hero.edad}}</h3>
-<h3>Poder del super heroe: {{hero.poder}}</h3>
-<h3>Identidad del super heroe: {{hero.identidad}}</h3>
-<h3>Universo del super heroe: {{hero.universo}}</h3>
-<div><span>id: </span>{{hero.id}}</div>
-<div>
-<label form="name"> Nombre del super heroe: </label>
-<input id="name" [(ngModel)]="hero.name" placeholder="name">
-</div>
-<div>
-<label form="edad"> Edad del super heroe: </label>
-<input id="edad" [(ngModel)]="hero.edad" placeholder="edad">
-</div>
-<div>
-<label form="poder"> Poder del super heroe: </label>
-<input id="poder" [(ngModel)]="hero.poder" placeholder="poder">
-</div>
-<div>
-<label form="identidad"> Identidad del super heroe: </label>
-<input id="identidad" [(ngModel)]="hero.identidad" placeholder="identidad">
-</div>
-<div>
-<label form="universo"> Universo del super heroe: </label>
-<input id="universo" [(ngModel)]="hero.universo" placeholder="universo">
+<h2>Mis heroes Favoritos</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>{{hero.name}}
+    </li>
+</ul>
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name}} detalles</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for = "hero-name">Heroe Nombre: </label>
+      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+  <div>
+    <label for = "hero-edad">Heroe Edad: </label>
+     <input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
+    </div>
+  <div>
+      <label for = "hero-poder">Heroe Poder: </label>
+     <input id="hero-poder" [(ngModel)]="selectedHero.poder" placeholder="poder">
+  </div>
+  <div>
+        <label for = "hero-identidad">Heroe Identidad: </label>
+        <input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
+  </div>
+  <div>
+      <label for = "hero-universo">Heroe Universo: </label>
+     <input id="hero-universo" [(ngModel)]="selectedHero.universo" placeholder="universo">
+ </div>
 </div>
