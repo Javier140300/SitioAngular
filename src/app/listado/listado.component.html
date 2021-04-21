@@ -1,0 +1,19 @@
+<h1>Lista de Super Heroes </h1>
+  
+  <ul>
+  <li *ngFor="let heroe of heroes; let i = index">
+    {{ i + 1 }} - {{ heroe }}
+  </li>
+
+  <div *nglf="heroes.lenght">
+      <h2>Heroe a borrar:
+          {{heroes[0]}}
+      </h2>
+  </div>
+  <button (click)="Borrar()">Borrar</button>
+
+  <h3>Lista de Super Heroes Eliminados: <br>
+  <li *ngFor="let heroe of messages; let x = index">
+    {{ x + 1 }} - {{ heroe }}
+</li>  
+</h3>
