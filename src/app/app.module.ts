@@ -7,6 +7,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ListadoComponent } from './listado/listado.component';
+import { ContadorComponent } from './contador/contador.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListadoComponent } from './listado/listado.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    ListadoComponent
+    ListadoComponent,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,

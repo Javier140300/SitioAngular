@@ -19,5 +19,4 @@ export class ListadoComponent  {
     this.heroes.shift();
     return heroe;
   }
-
 }
