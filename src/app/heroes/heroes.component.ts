@@ -10,6 +10,12 @@ import { MessageService } from '../message.service';
 })
 export class HeroesComponent implements OnInit {
 
+  numero = 500;
+  base = 5;
+  acumular(valor: number){
+    this.numero += valor;
+  }
+
   selectedHero?: Hero;
 
   heroes: Hero[] = [];

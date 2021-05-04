@@ -1,4 +1,4 @@
-<h2>Mis heroes Favoritos</h2>
+<h2>Mis villanos Favoritos</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
@@ -7,27 +7,24 @@
     </li>
 </ul>
 <div *ngIf="selectedHero">
-  <h2>{{selectedHero.name}} detalles</h2>
+  <h2>{{selectedHero.name}} datos a modificar </h2>
   <div><span>id: </span>{{selectedHero.id}}</div>
   <div>
-    <label for = "hero-name">Heroe Nombre: </label>
+    <label for = "hero-name">Villano Nombre: </label>
       <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
     </div>
   <div>
-    <label for = "hero-edad">Heroe Edad: </label>
-     <input id="hero-edad" [(ngModel)]="selectedHero.edad" placeholder="edad">
-    </div>
-  <div>
-      <label for = "hero-poder">Heroe Poder: </label>
-     <input id="hero-poder" [(ngModel)]="selectedHero.poder" placeholder="poder">
+      <label for = "hero-poder">Villano Poder: </label>
+        <input id="hero-poder" [(ngModel)]="selectedHero.poder" placeholder="poder">
   </div>
-  <div>
-        <label for = "hero-identidad">Heroe Identidad: </label>
-        <input id="hero-identidad" [(ngModel)]="selectedHero.identidad" placeholder="identidad">
-  </div>
-  <div>
-      <label for = "hero-universo">Heroe Universo: </label>
-     <input id="hero-universo" [(ngModel)]="selectedHero.universo" placeholder="universo">
- </div>
+<div>
+  <label for = "hero-nivelpoder">Villano Nivel Poder: </label>
+  <input id="hero-nivelpoder" [(ngModel)]="selectedHero.nivelpoder" placeholder="nivelpoder">
 </div>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<h2>Incrementar o decrementar el poder</h2>
+  <div>
+  <button (click) = "acumular(base)"> + {{ base }}</button>
+  <span >{{numero}}</span>
+  <button (click) = "acumular(-base)"> - {{ base }}</button>
+</div>
+</div>

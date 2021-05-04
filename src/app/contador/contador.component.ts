@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
-
   selector: 'app-contador',
   templateUrl: './contador.component.html',
   styleUrls: ['./contador.component.css']
 
 })
-
 export class ContadorComponent implements OnInit {
   title = 'Web Contador';
   numero = 10;
@@ -18,5 +16,4 @@ export class ContadorComponent implements OnInit {
   acumular(valor: number){
     this.numero += valor;
   }
-
 }
